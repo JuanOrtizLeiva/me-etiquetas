@@ -1,0 +1,2283 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ME-ETIQUETAS | Soluciones Industriales Inteligentes</title>
+    <meta name="description" content="Líder en cintas adhesivas, etiquetas y soluciones de embalaje industrial en Chile.">
+    
+    <style>
+        /* Design System 2025 */
+        :root {
+            /* Nueva Paleta Inspirada en Espacios Industriales Modernos */
+            --ink: #0A0E27;
+            --steel: #1C2541;
+            --cloud: #F8F9FD;
+            --mist: #E8ECF4;
+            --ember: #FF6B35;
+            --forest: #058C42;
+            --ocean: #3A86FF;
+            --sand: #FFE5B4;
+            --pure: #FFFFFF;
+            
+            /* Gradientes Sutiles */
+            --gradient-nav: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+            --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F8F9FD 100%);
+            --gradient-ember: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+            --gradient-ocean: linear-gradient(135deg, #3A86FF 0%, #5B9AFF 100%);
+            
+            /* Espaciado Compacto */
+            --space-2xs: 0.25rem;
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            
+            /* Bordes Redondeados */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Sombras Modernas */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+            
+            /* Transiciones Fluidas */
+            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+            --duration-fast: 200ms;
+            --duration-base: 300ms;
+            --duration-slow: 500ms;
+        }
+
+        /* Reset Moderno */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--steel);
+            background: var(--cloud);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Container System */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        /* Header Moderno con Blur */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--gradient-nav);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: all var(--duration-base) var(--ease-out);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            transition: transform var(--duration-fast) var(--ease-out);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Navigation Desktop */
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: var(--space-xl);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav-link {
+            color: var(--steel);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: color var(--duration-fast) var(--ease-out);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--ember);
+            transition: width var(--duration-base) var(--ease-out);
+        }
+
+        .nav-link:hover {
+            color: var(--ember);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Search Bar Compacta */
+        .search-bar {
+            position: relative;
+            width: 240px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: var(--space-sm) var(--space-lg) var(--space-sm) var(--space-md);
+            background: var(--mist);
+            border: 2px solid transparent;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            transition: all var(--duration-fast) var(--ease-out);
+            outline: none;
+        }
+
+        .search-input:focus {
+            background: var(--pure);
+            border-color: var(--ocean);
+            box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: var(--space-md);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--steel);
+            opacity: 0.5;
+        }
+
+        /* Cart Button Moderno */
+        .cart-btn {
+            position: relative;
+            padding: var(--space-sm) var(--space-md);
+            background: var(--gradient-ember);
+            color: var(--pure);
+            border: none;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--duration-fast) var(--ease-out);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--ocean);
+            color: var(--pure);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: var(--radius-full);
+            min-width: 20px;
+            text-align: center;
+        }
+
+        /* Sidebar Filter FIXED */
+        .filter-toggle {
+            position: fixed;
+            top: 100px;
+            left: var(--space-lg);
+            background: var(--gradient-ember);
+            color: var(--pure);
+            border: none;
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-md);
+            cursor: pointer;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--duration-fast) var(--ease-out);
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .filter-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--duration-base) var(--ease-out);
+            z-index: 999;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 320px;
+            height: 100vh;
+            background: var(--pure);
+            transform: translateX(-100%);
+            transition: transform var(--duration-slow) var(--ease-out);
+            z-index: 1001;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: var(--space-lg);
+            border-bottom: 1px solid var(--mist);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .sidebar-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .sidebar-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--steel);
+            cursor: pointer;
+            transition: color var(--duration-fast);
+        }
+
+        .sidebar-close:hover {
+            color: var(--ember);
+        }
+
+        .filter-section {
+            padding: var(--space-lg);
+            border-bottom: 1px solid var(--mist);
+        }
+
+        .filter-title {
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--ink);
+        }
+
+        .filter-options {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            cursor: pointer;
+            transition: all var(--duration-fast);
+        }
+
+        .filter-option:hover {
+            padding-left: var(--space-xs);
+        }
+
+        .filter-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--mist);
+            border-radius: var(--radius-sm);
+            position: relative;
+            transition: all var(--duration-fast);
+        }
+
+        .filter-checkbox.checked {
+            background: var(--ocean);
+            border-color: var(--ocean);
+        }
+
+        .filter-checkbox.checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--pure);
+            font-size: 0.75rem;
+        }
+
+        /* Main Layout */
+        .main-content {
+            margin-top: 72px;
+            min-height: 100vh;
+        }
+
+        .content-area {
+            padding: var(--space-xl) 0;
+        }
+
+        /* Hero Compacto */
+        .hero {
+            background: var(--gradient-ocean);
+            color: var(--pure);
+            padding: var(--space-2xl) 0;
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-20px, -20px) rotate(180deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            animation: slideUp var(--duration-slow) var(--ease-out);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: var(--space-xl);
+            animation: slideUp var(--duration-slow) var(--ease-out) 0.1s backwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            animation: slideUp var(--duration-slow) var(--ease-out) 0.2s backwards;
+        }
+
+        .btn {
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--duration-fast) var(--ease-out);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--pure);
+            color: var(--ocean);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--pure);
+            border: 2px solid var(--pure);
+        }
+
+        .btn-secondary:hover {
+            background: var(--pure);
+            color: var(--ocean);
+        }
+
+        /* Categories Section NEW */
+        .categories-section {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .category-card {
+            background: var(--pure);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--duration-base) var(--ease-out);
+            border: 2px solid transparent;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--ocean);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto var(--space-md);
+            background: var(--gradient-ocean);
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--pure);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .category-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: var(--space-xs);
+        }
+
+        .category-count {
+            color: var(--steel);
+            opacity: 0.7;
+            font-size: 0.875rem;
+        }
+
+        /* Products Section */
+        .products-section {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .view-options {
+            display: flex;
+            gap: var(--space-xs);
+        }
+
+        .view-btn {
+            padding: var(--space-xs) var(--space-sm);
+            background: var(--mist);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--duration-fast);
+        }
+
+        .view-btn.active {
+            background: var(--ocean);
+            color: var(--pure);
+        }
+
+        /* Grid Compacto 4-5 productos por fila */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: var(--space-md);
+        }
+
+        /* Vista Lista FIXED */
+        .products-grid.list-view {
+            grid-template-columns: 1fr;
+            gap: var(--space-sm);
+        }
+
+        .products-grid.list-view .product-card {
+            display: flex;
+            height: 120px;
+        }
+
+        .products-grid.list-view .product-image {
+            width: 120px;
+            height: 120px;
+            aspect-ratio: unset;
+        }
+
+        .products-grid.list-view .product-info {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-md) var(--space-lg);
+        }
+
+        .products-grid.list-view .product-details {
+            flex: 1;
+        }
+
+        .products-grid.list-view .product-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .product-card {
+            background: var(--pure);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--duration-base) var(--ease-out);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: var(--space-sm);
+            left: var(--space-sm);
+            background: var(--gradient-ember);
+            color: var(--pure);
+            padding: var(--space-2xs) var(--space-sm);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 1;
+        }
+
+        .product-image {
+            aspect-ratio: 1;
+            background: var(--mist);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--duration-slow) var(--ease-out);
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.05);
+        }
+
+        .quick-actions {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--space-sm);
+            transform: translateY(100%);
+            transition: transform var(--duration-base) var(--ease-out);
+            display: flex;
+            gap: var(--space-xs);
+        }
+
+        .product-card:hover .quick-actions {
+            transform: translateY(0);
+        }
+
+        .quick-btn {
+            flex: 1;
+            padding: var(--space-xs);
+            background: var(--gradient-ocean);
+            color: var(--pure);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all var(--duration-fast);
+        }
+
+        .quick-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: var(--space-md);
+        }
+
+        .product-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--ember);
+            font-weight: 600;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin: var(--space-2xs) 0;
+            line-height: 1.3;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ocean);
+        }
+
+        .product-price-old {
+            font-size: 0.875rem;
+            color: var(--steel);
+            text-decoration: line-through;
+            opacity: 0.5;
+            margin-left: var(--space-xs);
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--pure);
+            border-radius: var(--radius-xl);
+            padding: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: var(--space-lg);
+            color: var(--ink);
+        }
+
+        .about-content p {
+            color: var(--steel);
+            line-height: 1.8;
+            margin-bottom: var(--space-md);
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: var(--space-lg);
+            background: var(--gradient-card);
+            border-radius: var(--radius-lg);
+            transition: all var(--duration-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--ocean);
+        }
+
+        .stat-label {
+            color: var(--steel);
+            font-size: 0.875rem;
+        }
+
+        /* Features Grid UPDATED ICONS */
+        .features-section {
+            margin-bottom: var(--space-2xl);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .feature-card {
+            background: var(--pure);
+            padding: var(--space-lg);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all var(--duration-base);
+            border: 2px solid transparent;
+        }
+
+        .feature-card:hover {
+            border-color: var(--ocean);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-ocean);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto var(--space-md);
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--pure);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .feature-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: var(--space-sm);
+        }
+
+        .feature-description {
+            color: var(--steel);
+            font-size: 0.875rem;
+            line-height: 1.6;
+        }
+
+        /* Footer Moderno */
+        .footer {
+            background: var(--ink);
+            color: var(--pure);
+            padding: var(--space-2xl) 0 var(--space-xl);
+            margin-top: var(--space-2xl);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-brand p {
+            opacity: 0.8;
+            line-height: 1.6;
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-links h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--space-md);
+            opacity: 0.7;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-sm);
+        }
+
+        .footer-links a {
+            color: var(--pure);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all var(--duration-fast);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            padding-left: var(--space-xs);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: var(--space-xl);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.6;
+        }
+
+        /* WhatsApp Float Mejorado */
+        .whatsapp-float {
+            position: fixed;
+            bottom: var(--space-xl);
+            right: var(--space-xl);
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-xl);
+            cursor: pointer;
+            transition: all var(--duration-base) var(--ease-out);
+            z-index: 998;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+            
+            .main-content {
+                padding-left: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-sm);
+            }
+            
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--steel);
+            margin: 4px 0;
+            transition: all var(--duration-fast);
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Skeleton Loading */
+        .skeleton {
+            background: linear-gradient(90deg, var(--mist) 25%, var(--cloud) 50%, var(--mist) 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Micro-interacciones */
+        .bounce-in {
+            animation: bounceIn 0.5s var(--ease-out);
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Tooltips */
+        [data-tooltip] {
+            position: relative;
+        }
+
+        [data-tooltip]::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: var(--space-xs) var(--space-sm);
+            background: var(--ink);
+            color: var(--pure);
+            font-size: 0.75rem;
+            border-radius: var(--radius-sm);
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: all var(--duration-fast);
+        }
+
+        [data-tooltip]:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-4px);
+        }
+
+        /* Botón Volver Flotante */
+        .back-to-categories {
+            position: fixed;
+            top: 100px;
+            right: var(--space-lg);
+            background: var(--gradient-ocean);
+            color: var(--pure);
+            padding: var(--space-sm) var(--space-lg);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            z-index: 100;
+            transition: all var(--duration-fast) var(--ease-out);
+            text-decoration: none;
+            display: none;
+            align-items: center;
+            gap: var(--space-xs);
+            font-weight: 600;
+        }
+
+        .back-to-categories:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .back-to-categories.show {
+            display: flex;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+            font-size: 0.875rem;
+        }
+
+        .breadcrumb a {
+            color: var(--ocean);
+            text-decoration: none;
+            transition: color var(--duration-fast);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: var(--space-xs);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--ember);
+        }
+
+        .breadcrumb span {
+            color: var(--steel);
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">ME-ETIQUETAS</a>
+                
+                <nav class="nav-desktop">
+                    <div class="nav-links">
+                        <a href="#inicio" class="nav-link">Inicio</a>
+                        <a href="#categorias" class="nav-link">Categorías</a>
+                        <a href="#nosotros" class="nav-link">Nosotros</a>
+                        <a href="#contacto" class="nav-link">Contacto</a>
+                    </div>
+                    
+                    <div class="search-bar">
+                        <input type="search" class="search-input" placeholder="Buscar productos...">
+                        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    
+                    <button class="cart-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"/>
+                            <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"/>
+                            <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"/>
+                        </svg>
+                        Carrito
+                        <span class="cart-count">0</span>
+                    </button>
+                </nav>
+
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Toggle Button SIEMPRE VISIBLE -->
+    <button class="filter-toggle" onclick="toggleSidebar()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" y1="21" x2="4" y2="14"/>
+            <line x1="4" y1="10" x2="4" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12" y2="3"/>
+            <line x1="20" y1="21" x2="20" y2="16"/>
+            <line x1="20" y1="12" x2="20" y2="3"/>
+            <line x1="1" y1="14" x2="7" y2="14"/>
+            <line x1="9" y1="8" x2="15" y2="8"/>
+            <line x1="17" y1="16" x2="23" y2="16"/>
+        </svg>
+        Filtros
+    </button>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="sidebar-title">Filtros</h3>
+            <button class="sidebar-close" onclick="toggleSidebar()">×</button>
+        </div>
+        
+        <div class="filter-section">
+            <h4 class="filter-title">Categorías</h4>
+            <div class="filter-options">
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Cintas Adhesivas</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Etiquetas</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Stretch Film</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Especialidad</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Maquinaria</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4 class="filter-title">Precio</h4>
+            <div class="filter-options">
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Menos de $10.000</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>$10.000 - $50.000</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>$50.000 - $100.000</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Más de $100.000</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h4 class="filter-title">Disponibilidad</h4>
+            <div class="filter-options">
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox checked"></div>
+                    <span>En Stock</span>
+                </div>
+                <div class="filter-option" onclick="toggleFilter(this)">
+                    <div class="filter-checkbox"></div>
+                    <span>Por Encargo</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botones de acción -->
+        <div class="filter-section" style="border-bottom: none;">
+            <button class="btn btn-primary" style="width: 100%; margin-bottom: 10px;" onclick="applyFilters()">
+                Aplicar Filtros
+            </button>
+            <button class="btn btn-secondary" style="width: 100%; background: var(--mist); color: var(--steel); border: none;" onclick="clearFilters()">
+                Limpiar Filtros
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-area">
+                <!-- Hero Section -->
+                <section class="hero" id="inicio">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Soluciones industriales que impulsan tu negocio</h1>
+                        <p class="hero-subtitle">Cintas, etiquetas y embalaje de calidad superior con entrega inmediata</p>
+                        <div class="hero-buttons">
+                            <a href="https://wa.me/56997371743?text=Hola,%20necesito%20cotizar%20productos%20industriales" class="btn btn-primary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                </svg>
+                                Cotizar Ahora
+                            </a>
+                            <a href="#categorias" class="btn btn-secondary">
+                                Ver Categorías
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Categories Section NEW -->
+                <section class="categories-section" id="categorias">
+                    <div class="section-header">
+                        <h2 class="section-title">Categorías de Productos</h2>
+                    </div>
+                    
+                    <div class="categories-grid">
+                        <div class="category-card" onclick="showCategory('cintas')">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M8 12h8M12 8v8"/>
+                                </svg>
+                            </div>
+                            <h3 class="category-name">Cintas Adhesivas</h3>
+                            <p class="category-count">125 productos</p>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('etiquetas')">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7.5"/>
+                                    <path d="M16 2v4M8 2v4M3 10h18"/>
+                                    <path d="M18 21l2-2-2-2M16 19h6"/>
+                                </svg>
+                            </div>
+                            <h3 class="category-name">Etiquetas</h3>
+                            <p class="category-count">230 productos</p>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('stretch')">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                </svg>
+                            </div>
+                            <h3 class="category-name">Stretch Film</h3>
+                            <p class="category-count">45 productos</p>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('especialidad')">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="category-name">Especialidad</h3>
+                            <p class="category-count">78 productos</p>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('maquinaria')">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                                    <rect x="9" y="9" width="6" height="6"/>
+                                    <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 15h3M1 9h3M1 15h3"/>
+                                </svg>
+                            </div>
+                            <h3 class="category-name">Maquinaria</h3>
+                            <p class="category-count">32 productos</p>
+                        </div>
+                        
+                        <div class="category-card" onclick="showCategory('todos')">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                </svg>
+                            </div>
+                            <h3 class="category-name">Ver Todo</h3>
+                            <p class="category-count">510 productos</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Products Section -->
+                <section class="products-section" id="productos" style="display: none;">
+                    <div class="breadcrumb">
+                        <a href="#categorias" onclick="backToCategories(event)">← Volver a Categorías</a>
+                        <span>/</span>
+                        <span id="currentCategory">Todos los productos</span>
+                    </div>
+                    
+                    <div class="section-header">
+                        <h2 class="section-title">Productos</h2>
+                        <div class="view-options">
+                            <button class="view-btn active" onclick="setView('grid')" data-tooltip="Vista cuadrícula">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="3" y="3" width="7" height="7"/>
+                                    <rect x="14" y="3" width="7" height="7"/>
+                                    <rect x="3" y="14" width="7" height="7"/>
+                                    <rect x="14" y="14" width="7" height="7"/>
+                                </svg>
+                            </button>
+                            <button class="view-btn" onclick="setView('list')" data-tooltip="Vista lista">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <rect x="3" y="4" width="18" height="2"/>
+                                    <rect x="3" y="11" width="18" height="2"/>
+                                    <rect x="3" y="18" width="18" height="2"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Productos con imágenes reales -->
+                        <article class="product-card bounce-in" data-category="cintas" data-price="2790">
+                            <span class="product-badge">-20%</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/8zyQvVxY/2.webp" alt="Cinta Transparente" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">CINTAS</span>
+                                <h3 class="product-name">Cinta Transparente 48mm</h3>
+                                <div class="product-price">
+                                    $2.790
+                                    <span class="product-price-old">$3.490</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="etiquetas" data-price="18990">
+                            <span class="product-badge">Nuevo</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/9FYjW9bC/3.webp" alt="Etiquetas Térmicas" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ETIQUETAS</span>
+                                <h3 class="product-name">Etiquetas Térmicas 100x150</h3>
+                                <div class="product-price">$18.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="stretch" data-price="14500">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/q7zfX5Tv/5.png" alt="Film Stretch" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">STRETCH</span>
+                                <h3 class="product-name">Film Stretch 500mm</h3>
+                                <div class="product-price">$14.500</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="cintas" data-price="6990">
+                            <span class="product-badge">Hot</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/529WjtKv/Imagen.webp" alt="Doble Contacto" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">CINTAS</span>
+                                <h3 class="product-name">Doble Contacto 24mm</h3>
+                                <div class="product-price">$6.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="etiquetas" data-price="3990">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/8zyQvVxY/2.webp" alt="Etiquetas Adhesivas" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ETIQUETAS</span>
+                                <h3 class="product-name">Etiquetas Adhesivas Color</h3>
+                                <div class="product-price">$3.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="especialidad" data-price="10990">
+                            <span class="product-badge">-15%</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/9FYjW9bC/3.webp" alt="Cinta VOID" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ESPECIALIDAD</span>
+                                <h3 class="product-name">Cinta VOID Seguridad</h3>
+                                <div class="product-price">
+                                    $10.990
+                                    <span class="product-price-old">$12.990</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="maquinaria" data-price="28900">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/q7zfX5Tv/5.png" alt="Dispensador" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">MAQUINARIA</span>
+                                <h3 class="product-name">Dispensador Manual</h3>
+                                <div class="product-price">$28.900</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="stretch" data-price="21990">
+                            <span class="product-badge">Eco</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/529WjtKv/Imagen.webp" alt="Stretch Bio" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">STRETCH</span>
+                                <h3 class="product-name">Stretch Biodegradable</h3>
+                                <div class="product-price">$21.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="cintas" data-price="4290">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/8zyQvVxY/2.webp" alt="Masking Tape" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">CINTAS</span>
+                                <h3 class="product-name">Masking Tape 48mm</h3>
+                                <div class="product-price">$4.290</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="etiquetas" data-price="790">
+                            <span class="product-badge">Pro</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/9FYjW9bC/3.webp" alt="RFID Tags" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ETIQUETAS</span>
+                                <h3 class="product-name">Tags RFID Industrial</h3>
+                                <div class="product-price">$790</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="especialidad" data-price="13990">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/q7zfX5Tv/5.png" alt="Cinta Fibra" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ESPECIALIDAD</span>
+                                <h3 class="product-name">Cinta Fibra Vidrio</h3>
+                                <div class="product-price">$13.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="maquinaria" data-price="1590000">
+                            <span class="product-badge">Premium</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/529WjtKv/Imagen.webp" alt="Impresora" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">MAQUINARIA</span>
+                                <h3 class="product-name">Impresora Zebra ZT411</h3>
+                                <div class="product-price">$1.590.000</div>
+                            </div>
+                        </article>
+
+                        <!-- Productos adicionales para completar categorías -->
+                        <article class="product-card bounce-in" data-category="etiquetas" data-price="5990">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/8zyQvVxY/2.webp" alt="Etiquetas Folio" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ETIQUETAS</span>
+                                <h3 class="product-name">Etiquetas con Folio</h3>
+                                <div class="product-price">$5.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="stretch" data-price="32900">
+                            <span class="product-badge">Industrial</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/q7zfX5Tv/5.png" alt="Stretch Máquina" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">STRETCH</span>
+                                <h3 class="product-name">Stretch Film Máquina</h3>
+                                <div class="product-price">$32.900</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="especialidad" data-price="8990">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/9FYjW9bC/3.webp" alt="Cinta Aluminio" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ESPECIALIDAD</span>
+                                <h3 class="product-name">Cinta Aluminio</h3>
+                                <div class="product-price">$8.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="maquinaria" data-price="89900">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/529WjtKv/Imagen.webp" alt="Envolvedora" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">MAQUINARIA</span>
+                                <h3 class="product-name">Envolvedora Manual</h3>
+                                <div class="product-price">$89.900</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="cintas" data-price="5490">
+                            <span class="product-badge">Oferta</span>
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/8zyQvVxY/2.webp" alt="Cinta Papel" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">CINTAS</span>
+                                <h3 class="product-name">Cinta Papel Kraft</h3>
+                                <div class="product-price">$5.490</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="etiquetas" data-price="12990">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/9FYjW9bC/3.webp" alt="Etiquetas Transfer" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">ETIQUETAS</span>
+                                <h3 class="product-name">Etiquetas Transfer</h3>
+                                <div class="product-price">$12.990</div>
+                            </div>
+                        </article>
+
+                        <article class="product-card bounce-in" data-category="stretch" data-price="7990">
+                            <div class="product-image">
+                                <img src="https://i.postimg.cc/q7zfX5Tv/5.png" alt="Mini Stretch" class="product-img">
+                                <div class="quick-actions">
+                                    <button class="quick-btn">Vista Rápida</button>
+                                    <button class="quick-btn">Agregar</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <span class="product-category">STRETCH</span>
+                                <h3 class="product-name">Mini Stretch 100mm</h3>
+                                <div class="product-price">$7.990</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- About Section -->
+                <section class="about-section" id="nosotros">
+                    <div class="about-grid">
+                        <div class="about-content">
+                            <h2>Líderes en soluciones de embalaje industrial</h2>
+                            <p>
+                                Con más de 15 años de experiencia, ME-ETIQUETAS se ha consolidado como el socio 
+                                estratégico de las principales empresas de Chile en soluciones de identificación 
+                                y embalaje industrial.
+                            </p>
+                            <p>
+                                Nuestro compromiso con la calidad, innovación y servicio nos ha permitido crecer 
+                                junto a nuestros clientes, ofreciendo productos que cumplen los más altos estándares 
+                                internacionales y un servicio técnico especializado.
+                            </p>
+                            <a href="#contacto" class="btn btn-primary">Conoce más</a>
+                        </div>
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Años de experiencia</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">10k+</div>
+                                <div class="stat-label">Clientes satisfechos</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">500+</div>
+                                <div class="stat-label">Productos en stock</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-number">24h</div>
+                                <div class="stat-label">Despacho express</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section con ICONOS PROFESIONALES -->
+                <section class="features-section">
+                    <div class="section-header">
+                        <h2 class="section-title">¿Por qué elegir ME-ETIQUETAS?</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/>
+                                    <path d="M12 22V2"/>
+                                    <path d="M8 10l4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Calidad Certificada</h3>
+                            <p class="feature-description">
+                                Productos con certificación ISO 9001, garantizando los más altos estándares.
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="1" y="3" width="15" height="13"/>
+                                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                                    <circle cx="5.5" cy="18.5" r="2.5"/>
+                                    <circle cx="18.5" cy="18.5" r="2.5"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Entrega Express</h3>
+                            <p class="feature-description">
+                                Despacho en 24 horas para Santiago y envíos a todo Chile con tracking.
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Asesoría Técnica</h3>
+                            <p class="feature-description">
+                                Equipo especializado para ayudarte a encontrar la solución perfecta.
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/>
+                                    <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">Stock Permanente</h3>
+                            <p class="feature-description">
+                                Más de 500 productos disponibles para entrega inmediata.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>ME-ETIQUETAS</h3>
+                    <p>
+                        Tu socio confiable en soluciones de etiquetado y embalaje industrial. 
+                        Calidad, servicio y compromiso desde 2010.
+                    </p>
+                    <div style="display: flex; gap: 12px; margin-top: 20px;">
+                        <a href="https://wa.me/56997371743" style="color: #25D366;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:metiketas@gmail.com" style="color: var(--ember);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="m22 7-10 5L2 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Productos</h4>
+                    <ul>
+                        <li><a href="#">Cintas Adhesivas</a></li>
+                        <li><a href="#">Etiquetas</a></li>
+                        <li><a href="#">Stretch Film</a></li>
+                        <li><a href="#">Maquinaria</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#">Certificaciones</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li>📱 <a href="https://wa.me/56997371743">+56 9 9737 1743</a></li>
+                        <li>📧 <a href="mailto:metiketas@gmail.com">metiketas@gmail.com</a></li>
+                        <li>🕐 Lun-Vie: 9:00-18:00</li>
+                        <li>📍 Santiago, Chile</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 ME-ETIQUETAS. Todos los derechos reservados. | www.metiketas.cl</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Volver Flotante -->
+    <a href="#categorias" class="back-to-categories" onclick="backToCategories(event)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M5 12l7 7M5 12l7-7"/>
+        </svg>
+        Volver a Categorías
+    </a>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/56997371743?text=Hola,%20vengo%20del%20sitio%20web" 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Estado de la aplicación
+        let currentCategoryFilter = 'todos';
+        let activeFilters = {
+            categories: [],
+            priceRanges: [],
+            availability: ['En Stock']
+        };
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const overlay = document.querySelector('.sidebar-overlay');
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        // Filter Toggle
+        function toggleFilter(element) {
+            const checkbox = element.querySelector('.filter-checkbox');
+            checkbox.classList.toggle('checked');
+        }
+
+        // Back to Categories
+        function backToCategories(e) {
+            if (e) e.preventDefault();
+            const categoriesSection = document.getElementById('categorias');
+            const productsSection = document.getElementById('productos');
+            const backBtn = document.querySelector('.back-to-categories');
+            
+            productsSection.style.display = 'none';
+            categoriesSection.style.display = 'block';
+            backBtn.classList.remove('show');
+            
+            // Reset filters
+            currentCategoryFilter = 'todos';
+            clearFilters();
+            
+            // Scroll to categories
+            categoriesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Show Category
+        function showCategory(category) {
+            const categoriesSection = document.getElementById('categorias');
+            const productsSection = document.getElementById('productos');
+            const breadcrumb = document.getElementById('currentCategory');
+            const backBtn = document.querySelector('.back-to-categories');
+            
+            categoriesSection.style.display = 'none';
+            productsSection.style.display = 'block';
+            backBtn.classList.add('show');
+            
+            const categoryNames = {
+                'cintas': 'Cintas Adhesivas',
+                'etiquetas': 'Etiquetas',
+                'stretch': 'Stretch Film',
+                'especialidad': 'Especialidad',
+                'maquinaria': 'Maquinaria',
+                'todos': 'Todos los productos'
+            };
+            
+            breadcrumb.textContent = categoryNames[category] || 'Productos';
+            currentCategoryFilter = category;
+            
+            // Limpiar filtros previos
+            clearFilters();
+            
+            // Aplicar filtro de categoría
+            filterProducts();
+            
+            // Scroll to products
+            productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Apply Filters
+        function applyFilters() {
+            // Recopilar filtros activos
+            activeFilters = {
+                categories: [],
+                priceRanges: [],
+                availability: []
+            };
+
+            // Obtener categorías seleccionadas
+            document.querySelectorAll('.filter-section:nth-child(2) .filter-option').forEach(option => {
+                if (option.querySelector('.filter-checkbox.checked')) {
+                    activeFilters.categories.push(option.querySelector('span').textContent);
+                }
+            });
+
+            // Obtener rangos de precio seleccionados
+            document.querySelectorAll('.filter-section:nth-child(3) .filter-option').forEach(option => {
+                if (option.querySelector('.filter-checkbox.checked')) {
+                    activeFilters.priceRanges.push(option.querySelector('span').textContent);
+                }
+            });
+
+            // Obtener disponibilidad seleccionada
+            document.querySelectorAll('.filter-section:nth-child(4) .filter-option').forEach(option => {
+                if (option.querySelector('.filter-checkbox.checked')) {
+                    activeFilters.availability.push(option.querySelector('span').textContent);
+                }
+            });
+
+            // Si hay categorías seleccionadas en filtros, override la categoría actual
+            if (activeFilters.categories.length > 0) {
+                currentCategoryFilter = 'filtrado';
+            }
+
+            // Aplicar filtros
+            filterProducts();
+            
+            // Cerrar sidebar
+            toggleSidebar();
+        }
+
+        // Clear Filters
+        function clearFilters() {
+            // Desmarcar todos los checkboxes
+            document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+                checkbox.classList.remove('checked');
+            });
+            
+            // Marcar solo "En Stock" por defecto
+            const enStockCheckbox = document.querySelector('.filter-section:nth-child(4) .filter-option:first-child .filter-checkbox');
+            if (enStockCheckbox) {
+                enStockCheckbox.classList.add('checked');
+            }
+            
+            // Resetear filtros activos
+            activeFilters = {
+                categories: [],
+                priceRanges: [],
+                availability: ['En Stock']
+            };
+            
+            // Si estamos en vista de categoría, mantener ese filtro
+            if (currentCategoryFilter !== 'todos' && currentCategoryFilter !== 'filtrado') {
+                filterProducts();
+            } else {
+                // Mostrar todos los productos
+                document.querySelectorAll('.product-card').forEach(card => {
+                    card.style.display = 'block';
+                });
+                removeNoResultsMessage();
+            }
+        }
+
+        // Remove no results message
+        function removeNoResultsMessage() {
+            const noResultsMsg = document.getElementById('noResults');
+            if (noResultsMsg) {
+                noResultsMsg.remove();
+            }
+        }
+
+        // Filter Products
+        function filterProducts() {
+            const cards = document.querySelectorAll('.product-card');
+            let visibleCount = 0;
+            
+            cards.forEach(card => {
+                let shouldShow = true;
+                const productCategory = card.getAttribute('data-category');
+                
+                // Filtro por categoría actual (desde navegación)
+                if (currentCategoryFilter !== 'todos' && currentCategoryFilter !== 'filtrado') {
+                    if (productCategory !== currentCategoryFilter) {
+                        shouldShow = false;
+                    }
+                }
+                
+                // Filtro por categorías seleccionadas en sidebar
+                if (activeFilters.categories.length > 0 && shouldShow) {
+                    const categoryText = card.querySelector('.product-category').textContent;
+                    const match = activeFilters.categories.some(cat => {
+                        if (cat === 'Cintas Adhesivas' && productCategory === 'cintas') return true;
+                        if (cat === 'Etiquetas' && productCategory === 'etiquetas') return true;
+                        if (cat === 'Stretch Film' && productCategory === 'stretch') return true;
+                        if (cat === 'Especialidad' && productCategory === 'especialidad') return true;
+                        if (cat === 'Maquinaria' && productCategory === 'maquinaria') return true;
+                        return false;
+                    });
+                    if (!match) shouldShow = false;
+                }
+                
+                // Filtro por precio
+                if (activeFilters.priceRanges.length > 0 && shouldShow) {
+                    const price = parseInt(card.getAttribute('data-price'));
+                    
+                    const inRange = activeFilters.priceRanges.some(range => {
+                        if (range.includes('Menos de')) return price < 10000;
+                        if (range.includes('10.000 - 50.000')) return price >= 10000 && price <= 50000;
+                        if (range.includes('50.000 - 100.000')) return price > 50000 && price <= 100000;
+                        if (range.includes('Más de')) return price > 100000;
+                        return false;
+                    });
+                    
+                    if (!inRange) shouldShow = false;
+                }
+                
+                // Mostrar u ocultar
+                if (shouldShow) {
+                    card.style.display = 'block';
+                    card.classList.add('bounce-in');
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Mostrar mensaje si no hay productos
+            const grid = document.getElementById('productsGrid');
+            removeNoResultsMessage();
+            
+            if (visibleCount === 0) {
+                const msg = document.createElement('div');
+                msg.id = 'noResults';
+                msg.style.textAlign = 'center';
+                msg.style.padding = '60px 20px';
+                msg.style.gridColumn = '1 / -1';
+                msg.innerHTML = `
+                    <h3 style="color: var(--steel); margin-bottom: 10px;">No se encontraron productos</h3>
+                    <p style="color: var(--steel); opacity: 0.7;">
+                        Intenta ajustar los filtros o 
+                        <a href="#" onclick="clearFilters(); return false;" style="color: var(--ocean);">limpiar filtros</a>
+                        | 
+                        <a href="#" onclick="backToCategories(); return false;" style="color: var(--ocean);">Ver todas las categorías</a>
+                    </p>
+                `;
+                grid.appendChild(msg);
+            }
+        }
+
+        // View Toggle FIXED
+        function setView(view) {
+            const grid = document.getElementById('productsGrid');
+            const gridBtn = document.querySelector('[onclick="setView(\'grid\')"]');
+            const listBtn = document.querySelector('[onclick="setView(\'list\')"]');
+            
+            if (view === 'list') {
+                grid.classList.add('list-view');
+                listBtn.classList.add('active');
+                gridBtn.classList.remove('active');
+                
+                // Ajustar estructura para vista lista
+                const cards = grid.querySelectorAll('.product-card');
+                cards.forEach(card => {
+                    const info = card.querySelector('.product-info');
+                    if (!info.querySelector('.product-details')) {
+                        const details = document.createElement('div');
+                        details.className = 'product-details';
+                        const actions = document.createElement('div');
+                        actions.className = 'product-actions';
+                        
+                        // Mover contenido
+                        while (info.firstChild) {
+                            details.appendChild(info.firstChild);
+                        }
+                        
+                        info.appendChild(details);
+                        info.appendChild(actions);
+                        
+                        // Agregar botón de compra
+                        actions.innerHTML = '<button class="btn btn-primary">Agregar al carrito</button>';
+                    }
+                });
+            } else {
+                grid.classList.remove('list-view');
+                gridBtn.classList.add('active');
+                listBtn.classList.remove('active');
+            }
+        }
+
+        // Cart Management
+        let cart = [];
+        
+        function updateCartUI() {
+            const cartCount = document.querySelector('.cart-count');
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            cartCount.style.display = totalItems > 0 ? 'inline-flex' : 'none';
+        }
+
+        // Add to Cart with Animation
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('quick-btn') && e.target.textContent === 'Agregar') {
+                e.stopPropagation();
+                const card = e.target.closest('.product-card');
+                const productName = card.querySelector('.product-name').textContent;
+                
+                // Add to cart
+                const existingItem = cart.find(item => item.name === productName);
+                if (existingItem) {
+                    existingItem.quantity++;
+                } else {
+                    cart.push({ name: productName, quantity: 1 });
+                }
+                
+                updateCartUI();
+                
+                // Visual feedback
+                e.target.textContent = '✓ Agregado';
+                e.target.style.background = 'var(--gradient-ocean)';
+                
+                setTimeout(() => {
+                    e.target.textContent = 'Agregar';
+                    e.target.style.background = '';
+                }, 1500);
+            }
+        });
+
+        // Search Functionality
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+            
+            cards.forEach(card => {
+                const name = card.querySelector('.product-name').textContent.toLowerCase();
+                const category = card.querySelector('.product-category').textContent.toLowerCase();
+                
+                if (name.includes(query) || category.includes(query)) {
+                    card.style.display = 'block';
+                    card.classList.add('bounce-in');
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (!this.onclick) { // Solo si no tiene onclick
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offset = 100;
+                        const targetPosition = target.offsetTop - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = 'var(--shadow-md)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '50px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('bounce-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.product-card, .stat-card, .feature-card, .category-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize
+        updateCartUI();
+
+        // Mobile Menu
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            // Placeholder for mobile menu
+            alert('Menú móvil en desarrollo');
+        });
+    </script>
+</body>
+</html>
