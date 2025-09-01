@@ -49,27 +49,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 1.2rem 0;  /* Aumentado ligeramente para acomodar el logo más grande */
 }
 
 .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
-.logo-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-blue);
-    letter-spacing: -0.5px;
-}
-
-.logo-tagline {
-    font-size: 0.75rem;
-    color: var(--medium-gray);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.logo-img {
+    height: 70px;  /* Aumentado de 50px a 70px */
+    width: auto;
+    object-fit: contain;
 }
 
 /* Navegación Principal */
@@ -321,7 +312,46 @@ body {
 }
 
 .mv-card li {
+    margin-bottom: 0.75rem;
+}
+
+/* Lista de valores simplificada */
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-gray);
     margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.values-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+}
+
+/* CTA Question */
+.cta-question {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--background);
+    border-radius: var(--radius);
+    text-align: center;
+}
+
+.cta-question p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 /* Sectores */

@@ -1,9 +1,9 @@
 // Catálogo de productos - Versión Corporativa B2B
-// Actualizado: 2025-08-27 10:31
+// Actualizado: 2025-09-01 11:23
 
 const catalogoProductos = {
   "version": "2.0.0",
-  "fecha": "2025-08-27T10:31:07.550215",
+  "fecha": "2025-09-01T11:23:47.819796",
   "productos": [
     {
       "id": "balanza-150-kilos",
@@ -48,12 +48,12 @@ const catalogoProductos = {
       "categoria": "especialidad",
       "descripcion": "Claro, aquí tienes una versión mucho más breve y directa.\n\nCanasto Apilable A300: Máxima Capacidad y Resistencia\nOptimiza tu logística con el Canasto A300, la solución profesional preferida por industrias como la panadera. Diseñado para una máxima durabilidad y un almacenamiento eficiente.\n\n\nGran Capacidad: 58 litros.\n\n\n\n\nMaterial de Alta Resistencia: Fabricado en PEAD , soporta temperaturas de -20°C a +40°C.\n\n\n\n\n\nDiseño Funcional: Apilable en columna , con base y paredes perforadas para ventilación y manillas ergonómicas.\n\n\n\n\n\n\nDimensiones Externas: 550 x 390 x 310 mm (L x An x Al).\n\n\n\n\n\n\nFuentes",
       "imagenes_web": [
-        "img/productos/canasto-apilable/43.jpg",
-        "img/productos/canasto-apilable/44.jpg",
-        "img/productos/canasto-apilable/45.jpg",
-        "img/productos/canasto-apilable/46.jpg"
+        "img/productos/canasto-apilable/47.jpg",
+        "img/productos/canasto-apilable/48.jpg",
+        "img/productos/canasto-apilable/49.jpg",
+        "img/productos/canasto-apilable/50.jpg"
       ],
-      "imagen_principal": "img/productos/canasto-apilable/43.jpg"
+      "imagen_principal": "img/productos/canasto-apilable/47.jpg"
     },
     {
       "id": "canasto-liso",
@@ -75,10 +75,10 @@ const catalogoProductos = {
       "categoria": "cintas",
       "descripcion": "",
       "imagenes_web": [
-        "img/productos/cinta-de-embalaje-1000-metros-optima/cinta 1000 metros.png",
-        "img/productos/cinta-de-embalaje-1000-metros-optima/cinta optima 1000 metros.png"
+        "img/productos/cinta-de-embalaje-1000-metros-optima/cinta 1000 metros.jpg",
+        "img/productos/cinta-de-embalaje-1000-metros-optima/cinta optima 1000 metros.jpg"
       ],
-      "imagen_principal": "img/productos/cinta-de-embalaje-1000-metros-optima/cinta 1000 metros.png"
+      "imagen_principal": "img/productos/cinta-de-embalaje-1000-metros-optima/cinta 1000 metros.jpg"
     },
     {
       "id": "cinta-de-embalaje-usatape",
@@ -97,9 +97,9 @@ const catalogoProductos = {
       "categoria": "cintas",
       "descripcion": "Cinta Delimitadora Óptima: Alta Resistencia para Señalización\nLa cinta delimitadora Óptima es una solución de alta resistencia diseñada para la señalización de áreas (Hazard Marking) en una amplia variedad de superficies y texturas. Gracias a su fabricación en PVC con adhesivo de caucho natural, es ideal tanto para aplicaciones en interiores como en exteriores.\n\n\n\n\n\n\nAplicación Versátil: Recomendada para usos generales en diversas texturas, siempre sobre superficies limpias y secas.\n\n\nAdhesión Superior: Para una máxima adherencia, se debe aplicar presión sobre la cinta después de su colocación.\n\n\nAlta Visibilidad: Disponible en color amarillo/negro para una clara demarcación de zonas.\n\n\nFormato Estándar: Se presenta en rollos de 50 mm de ancho por 33 metros de largo.",
       "imagenes_web": [
-        "img/productos/cinta-delimitadora-optima/cinta delimitadora.png"
+        "img/productos/cinta-delimitadora-optima/cinta delimitadora.jpg"
       ],
-      "imagen_principal": "img/productos/cinta-delimitadora-optima/cinta delimitadora.png"
+      "imagen_principal": "img/productos/cinta-delimitadora-optima/cinta delimitadora.jpg"
     },
     {
       "id": "cinta-embalaje-sellocinta",
@@ -118,20 +118,10 @@ const catalogoProductos = {
       "categoria": "cintas",
       "descripcion": "",
       "imagenes_web": [
-        "img/productos/cinta-fragil/fragil png.png",
-        "img/productos/cinta-fragil/fragil.png"
+        "img/productos/cinta-fragil/fragil png.jpg",
+        "img/productos/cinta-fragil/fragil.jpg"
       ],
-      "imagen_principal": "img/productos/cinta-fragil/fragil png.png"
-    },
-    {
-      "id": "cinta-masking",
-      "nombre": "cinta masking",
-      "categoria": "cintas",
-      "descripcion": "Cinta de Enmascarar (Masking Tape) Sellocinta: Uso Universal\nLa cinta de enmascarar Sellocinta es una herramienta indispensable para una amplia gama de aplicaciones estándar. Hecha con papel crepé y un adhesivo de goma sintética, esta cinta es la aliada perfecta para proyectos en el hogar, la oficina y el taller. \n\n\nAplicaciones Múltiples: Especialmente indicada para trabajos de pintura interior, tareas escolares, manualidades, serigrafía y el embalaje de objetos livianos. \n\n\nAdhesión Confiable: Ofrece una resistencia a la tensión de 61.3 N/25mm sobre superficies limpias y secas. \n\n\n\nPrecauciones: Para un rendimiento óptimo, no se recomienda su uso en exteriores ni exponerla a rayos UV por tiempo prolongado. \n\n\nFormatos: Disponible en varias medidas, como 18 mm x 40 m, 24 mm x 40 m y 48 mm x 40 m.",
-      "imagenes_web": [
-        "img/productos/cinta-masking/8.jpg"
-      ],
-      "imagen_principal": "img/productos/cinta-masking/8.jpg"
+      "imagen_principal": "img/productos/cinta-fragil/fragil png.jpg"
     },
     {
       "id": "cinta-multiuso-optima",
@@ -139,12 +129,12 @@ const catalogoProductos = {
       "categoria": "cintas",
       "descripcion": "Cinta Multiuso Óptima: Alta Resistencia para Todo Uso\nLa cinta multiuso (Duct Tape) Óptima es una solución de alta resistencia, ideal para una amplia gama de reparaciones y aplicaciones generales tanto en interiores como en exteriores. Su composición de polietileno y malla de tela con adhesivo Hot Melt la hace perfecta para adherirse a múltiples texturas.\n\n\n\nAplicación Versátil: Se recomienda su uso en superficies limpias, secas y libres de contaminantes para asegurar la máxima adherencia.\n\n\nMaterial Resistente: Compuesta por polietileno y malla de tela , ofrece una resistencia a la rotura de 20.8 N/cm.\n\n\n\nAdhesivo Fuerte: Utiliza un adhesivo Hot Melt sensible a la presión.\n\n\nFormato Estándar: Disponible en rollos de 48 mm de ancho por 30 metros de largo.",
       "imagenes_web": [
-        "img/productos/cinta-multiuso-optima/duct-tape-gray-adhesive-tape-roll-8MMkKva5.jpg",
-        "img/productos/cinta-multiuso-optima/multiuso 1.jpg",
-        "img/productos/cinta-multiuso-optima/multiuso ductape png.png",
-        "img/productos/cinta-multiuso-optima/PhotoRoom_019_20230731_140051.webp"
+        "img/productos/cinta-multiuso-optima/image (2).jpg",
+        "img/productos/cinta-multiuso-optima/multi uso.jpg",
+        "img/productos/cinta-multiuso-optima/multiuso ductape png.jpg",
+        "img/productos/cinta-multiuso-optima/PhotoRoom_019_20230731_140051.jpg"
       ],
-      "imagen_principal": "img/productos/cinta-multiuso-optima/duct-tape-gray-adhesive-tape-roll-8MMkKva5.jpg"
+      "imagen_principal": "img/productos/cinta-multiuso-optima/image (2).jpg"
     },
     {
       "id": "cintas-de-transferencia-termica",
@@ -195,10 +185,10 @@ const catalogoProductos = {
       "categoria": "cintas",
       "descripcion": "Masking Tape Óptima: Adhesión Precisa sin Residuos\nEl Masking Tape Óptima es la solución ideal para trabajos de uso general que requieren una adhesión inmediata y una remoción limpia. Su composición de papel crepé con adhesivo de caucho natural permite retirarla fácilmente sin dejar residuos ni dañar las superficies.\n\n\nAplicación Versátil: Ofrece un excelente rendimiento en una gran variedad de superficies. \n\n\nMaterial Flexible: Fabricada en papel crepé con un 8% de elongación, se adapta a diferentes formas y contornos.\n\n\nAdhesión Confiable: Cuenta con una resistencia a la tracción de 60 N/in y una resistencia a la adhesión de 5 N/in. \n\n\n\nMúltiples Formatos: Disponible en anchos de 18mm, 24mm, 36mm y 48mm, todos en rollos de 40 metros de largo.",
       "imagenes_web": [
-        "img/productos/masking-optima/masking png.png",
-        "img/productos/masking-optima/masking.png"
+        "img/productos/masking-optima/masking png.jpg",
+        "img/productos/masking-optima/masking.jpg"
       ],
-      "imagen_principal": "img/productos/masking-optima/masking png.png"
+      "imagen_principal": "img/productos/masking-optima/masking png.jpg"
     },
     {
       "id": "tapa-multik",
